@@ -45,7 +45,8 @@
             <div>
 
             </div>
-        </div><br /><br />
+        </div>
+        <div style="height:800px !important "></div>
         <div>
             <table class="table-bordered" style="width:100%">
                 <thead>
@@ -78,7 +79,7 @@
                         </td>
                         <td class="col-md-8">
                             <label>Received with thanks from : &nbsp @Html.DisplayFor(a => a.CustomerName)</label><br />
-                            <label>The Sum of Taka</label><br />
+                            <label>The Sum of Taka : @ViewBag.word</label><br />
                             <label>as adv./part/full payment against : &nbsp @Html.DisplayFor(a => a.ChallanNo)</label><br />
                             <label>Bill no. &nbsp @Html.DisplayFor(a => a.BillId) &nbsp Date : @Html.DisplayFor(a => a.Date)</label><br />
                             <label>Cash/Check No. Bank @Html.DisplayFor(a => a.PaymentType) &nbsp @Html.DisplayFor(a => a.BankDetails)</label>

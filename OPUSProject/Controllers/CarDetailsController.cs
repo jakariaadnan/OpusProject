@@ -35,7 +35,7 @@ namespace OPUSProject.Controllers
 
             _context.Entry(carDetails).State = EntityState.Modified;
             await _context.SaveChangesAsync();
-            return RedirectToAction("GetChallan", new { Id = carDetails.Id });
+            return RedirectToAction("PrintChallan", new { Id = carDetails.Id });
         }
         public ActionResult PrintQuatation(int id)
         {
@@ -53,12 +53,12 @@ namespace OPUSProject.Controllers
         {
             try
             {
-                var report = Converter.Convert(new Uri("https://localhost:44301/CarDetails/GetQuatation/" + id));
+                var report = Converter.Convert(new Uri("https://localhost:44301/CarDetails/GetChallan/" + id));
                 return File(report, "application/pdf");
             }
             catch (Exception)
             {
-                return RedirectToAction("GetQuatation", new { Id = id });
+                return RedirectToAction("GetChallan", new { Id = id });
             }
         }
         public async Task<ActionResult<IEnumerable<QuatationVM>>> GetQuatation(int id)
@@ -98,6 +98,7 @@ namespace OPUSProject.Controllers
                                   MoneyReceiptNo=b.MoneyReceiptNo,
                                   Price=c.Price
                               }).FirstOrDefaultAsync();
+            ViewBag.word = NumberToWords(Convert.ToInt32(challan.Price));
             return View(challan);
         }        
         public IActionResult Create()

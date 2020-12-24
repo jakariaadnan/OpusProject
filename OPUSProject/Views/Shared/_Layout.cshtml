@@ -22,13 +22,19 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li>
-                            <a class="nav-link text-dark" asp-area="" asp-controller="CarDetails" asp-action="UnAcceptedQ">Quatation</a>
-                        </li>
+                        
                         <li>
                             <a class="nav-link text-dark" asp-area="" asp-controller="CarDetails" asp-action="Create">Create Quatation</a>
                         </li>
-                    </ul>
+                        @if (this.User.Identity.IsAuthenticated)
+                        {
+                            @if(this.User.IsInRole("Manager")){
+                                <li>
+                                    <a class="nav-link text-dark" asp-controller="CarDetails" asp-action="UnAcceptedQ">Quatation</a>
+                                </li>
+                            }
+                        }
+                     </ul>
                 </div>
             </div>
         </nav>
