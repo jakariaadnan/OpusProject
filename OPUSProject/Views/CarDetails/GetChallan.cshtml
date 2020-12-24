@@ -1,0 +1,92 @@
+﻿@model OPUSProject.Models.QuatationVM
+@{
+    ViewData["Title"] = "Challan";
+}
+    <div>
+        <div>
+            <div>
+                <h1 class="text-center">J H Car Center</h1>
+                <h6 class="text-center">All Kinds Of Car Purchaser & Seller</h6>
+                <h6 class="text-center">80/5, Kakrail (Ground Fl.) Dhaka-1000. Phone: 93355471</h6>
+                <label>------------------------------------------------------------------------------------------------------------------------------------------------------------------------</label><br /><br />
+                <label>Challan no :&nbsp </label>@Html.DisplayFor(a => a.ChallanNo)
+                <h2 class="text-center">Challan</h2>
+                <label class="float-right">Date : @Html.DisplayFor(a => a.Date)</label><br />
+                <label>Name : &nbsp @Html.DisplayFor(a => a.CustomerName)</label><br />
+                <label>Address : &nbsp @Html.DisplayFor(a => a.CustomerAddress)</label>
+            </div>
+            <div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="row text-center">
+                            <th class="col-1">No.</th>
+                            <th class="col-6">Descriptions</th>
+                            <th class="col-3">Quantity</th>
+                            <th class="col-2">Remark</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="row text-center">
+                            <td class="col-1 text-center">1</td>
+                            <td class="col-6">@Html.DisplayFor(a => a.Accessorie)</td>
+                            <td class="col-3">1</td>
+                            <td class="col-2">1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <p>
+                    Any claim against shortage or damage must be noticed in written within 3 (three) days of receipt of goods, otherwise it will be assured that goods have been received in order and actualy / anterily as per this challan.
+                </p>
+                <p class="float-right">For: J H Car Center</p><br /><br /><br />
+                <p class="float-left">Receiver Signeture</p><p class="float-right">Authorised Signeture</p><br />
+            </div>
+            <div>
+
+            </div>
+        </div><br /><br />
+        <div>
+            <table class="table-bordered" style="width:100%">
+                <thead>
+                    <tr class="row">
+                        <th class="col-md-4">
+                            <h1 class="text-center">J H Car Center</h1>
+                            <h6 class="text-center">80/5, Kakrail (Ground Fl.) Dhaka-1000.</h6>
+                            <label>Si no :&nbsp @Html.DisplayFor(a => a.MoneyReceiptNo)</label>
+                            <label class="float-right">Date : @Html.DisplayFor(a => a.Date)</label><br />
+                        </th>
+                        <th class="col-md-8">
+                            <h1 class="text-center">J H Car Center</h1>
+                            <h6 class="text-center">All Kinds Of Car Purchaser & Seller</h6>
+                            <h6 class="text-center">80/5, Kakrail (Ground Fl.) Dhaka-1000. Phone: 93355471</h6>
+                            <label>Si no :&nbsp @Html.DisplayFor(a => a.MoneyReceiptNo)</label>
+                            <h3>Money Receipt</h3>
+                            <label class="float-right">Date : @Html.DisplayFor(a => a.Date)</label><br />
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="row">
+                        <td class="col-md-4">
+                            <label>Received from : &nbsp @Html.DisplayFor(a => a.CustomerName)</label><br />
+                            <label>as adv./part/full payment against : &nbsp @Html.DisplayFor(a => a.ChallanNo)</label><br />
+                            <label>Bill no. &nbsp @Html.DisplayFor(a => a.BillId) &nbsp Date :@Html.DisplayFor(a => a.Date)</label><br />
+                            <label>Cash/Check No. Bank @Html.DisplayFor(a => a.PaymentType) &nbsp @Html.DisplayFor(a => a.BankDetails)</label>
+                            <h4>TK: &nbsp @Html.DisplayFor(a => a.Price)</h4>
+                            <h5>For: J H Car Center</h5>
+                        </td>
+                        <td class="col-md-8">
+                            <label>Received with thanks from : &nbsp @Html.DisplayFor(a => a.CustomerName)</label><br />
+                            <label>The Sum of Taka</label><br />
+                            <label>as adv./part/full payment against : &nbsp @Html.DisplayFor(a => a.ChallanNo)</label><br />
+                            <label>Bill no. &nbsp @Html.DisplayFor(a => a.BillId) &nbsp Date : @Html.DisplayFor(a => a.Date)</label><br />
+                            <label>Cash/Check No. Bank @Html.DisplayFor(a => a.PaymentType) &nbsp @Html.DisplayFor(a => a.BankDetails)</label>
+                            <h4>TK: &nbsp @Html.DisplayFor(a => a.Price)</h4>
+                            <h5>For: J H Car Center</h5>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>

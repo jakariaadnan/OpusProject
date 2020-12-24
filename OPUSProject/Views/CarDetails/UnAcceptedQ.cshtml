@@ -1,0 +1,33 @@
+﻿@model IEnumerable<OPUSProject.Models.CarDetails>
+@{
+    ViewData["Title"] = "UnAcceptedQ";
+}
+    <div>
+        <p>
+            <a asp-action="Create">Create New</a>
+        </p>
+        <h1 class="text-center">Created Quatation</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Model Name</th>
+                    <th>Price</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.ModelName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                        <th>
+                            <a asp-action="Accept" asp-route-id="@item.Id">Accept</a> |
+                            <a>Reject</a>
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+

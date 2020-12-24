@@ -1,0 +1,99 @@
+﻿@model OPUSProject.Models.QuatationVM
+@{
+    ViewData["Title"] = "Quatation";
+}
+    <div>
+        <div>
+            <h1 class="text-center">J H Car Center</h1>
+            <h6 class="text-center">All Kinds Of Car Purchaser & Seller</h6>
+            <h6 class="text-center">80/5, Kakrail (Ground Fl.) Dhaka-1000. Phone: 93355471</h6>
+            <label>------------------------------------------------------------------------------------------------------------------------------------------------------------------------</label><br /><br />
+            <label class="float-right">Date : @Html.DisplayFor(a => a.Date)</label><br />
+            <h1 class="text-center text-capitalize">QUATATION</h1>
+            <h1>&nbsp To &nbsp &nbsp &nbsp &nbsp @Html.DisplayFor(a => a.CustomerName) </h1>
+            <h1> &nbsp &nbsp &nbsp &nbsp&nbsp @Html.DisplayFor(a => a.CustomerAddress)</h1><br />
+            <h6>A/C</h6>
+            <h6>Dear Sir</h6>
+            <p>We have great pleasure to offer our best price as follow in responce to your valued query -</p>
+        </div>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr class="row">
+                    <th class="col-md-1 text-center">SI. No.</th>
+                    <th class="col-md-8 text-center">Description Of Vheicle</th>
+                    <th class="col-md-3 text-center">Price Per Unit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="row">
+                    <td class="col-md-1 text-center">1</td>
+                    <td class="col-md-8">Type Of Vheicle    :   @Html.DisplayFor(a => a.TypeOfVehicl)</td>
+                    <td class="col-md-3  text-center"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col-md-1 text-center">2</td>
+                    <td class="col-md-8">Chassis No.        :   @Html.DisplayFor(a => a.ChessisNo)</td>
+                    <td class="col-md-3  text-center"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col-md-1 text-center">3</td>
+                    <td class="col-md-8">Engine No.         :   @Html.DisplayFor(a => a.EngineNo)</td>
+                    <td class="col-md-3  text-center"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col-md-1 text-center">4</td>
+                    <td class="col-md-8">Manf. Year        :   @Html.DisplayFor(a => a.ManfYear)</td>
+                    <td class="col-md-3  text-center"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col-md-1 text-center">5</td>
+                    <td class="col-md-8">C.C         :   @Html.DisplayFor(a => a.CC)</td>
+                    <td class="col-md-3  text-center"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col-md-1 text-center">6</td>
+                    <td class="col-md-8">Color        :   @Html.DisplayFor(a => a.Color)</td>
+                    <td class="col-md-3  text-center"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col-md-1 text-center">7</td>
+                    <td class="col-md-8">Load Capacity         :   @Html.DisplayFor(a => a.LoadCapacity)</td>
+                    <td class="col-md-3  text-center"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col-md-1 text-center">8</td>
+                    <td class="col-md-8">Accessories         :   @Html.DisplayFor(a => a.Accessorie)</td>
+                    <td class="col-md-3"></td>
+                </tr>
+                <tr class="row">
+                    <td class="col-md-1"></td>
+                    <td class="col-md-8"></td>
+                    <td class="col-md-3">TK: @Html.DisplayFor(a => a.Price)</td>
+                </tr>
+                <tr class="row">
+                    <td class="col-md-1"></td>
+                    <td class="col-md-11">Taka In Words: @ViewBag.word</td>
+                </tr>
+                <tr class="row">
+                    <td class="col-md-1"></td>
+                    <td class="col-md-11 text-center">Terms and Condition</td>
+                </tr>
+                <tr class="row">
+                    <td class="col-md-1"></td>
+                    <td class="col-md-11">
+                        <h6>Payment :&nbsp 100% Payment to be made in cash /Check/Pay Order/D.D in favour of our account at the time of delivery.</h6>
+                        <h6>Warranty :&nbsp We shell provide one year after sales service without apare parts.</h6>
+                        <h6>Delivery :&nbsp Within &nbsp @Html.DisplayFor(a => a.DeliveryDays) &nbsp days from the date of your final confirmation.</h6>
+                        <h6>Validaty :&nbsp Our offer shall remain valid upto &nbsp @Html.DisplayFor(a => a.OfferDays) &nbsp days fro your acceptance from the date of this offer.</h6>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <p>We hope you will find our offer very competitive and we look forward to receiving your valued order soon.</p>
+            <p>Thanking You</p>
+            <p>For: J H Car Center</p>
+        </div>
+    </div>
+

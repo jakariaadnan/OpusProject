@@ -1,0 +1,89 @@
+﻿@model OPUSProject.Models.CarDetails
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>CarDetails</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Company" class="control-label"></label>
+                <input asp-for="Company" class="form-control" />
+                <span asp-validation-for="Company" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TypeOfVehicle" class="control-label"></label>
+                <input asp-for="TypeOfVehicle" class="form-control" />
+                <span asp-validation-for="TypeOfVehicle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModelName" class="control-label"></label>
+                <input asp-for="ModelName" class="form-control" />
+                <span asp-validation-for="ModelName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ChessisNo" class="control-label"></label>
+                <input asp-for="ChessisNo" class="form-control" />
+                <span asp-validation-for="ChessisNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EngineNo" class="control-label"></label>
+                <input asp-for="EngineNo" class="form-control" />
+                <span asp-validation-for="EngineNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ManufactureYear" class="control-label"></label>
+                <input asp-for="ManufactureYear" class="form-control" />
+                <span asp-validation-for="ManufactureYear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CC" class="control-label"></label>
+                <input asp-for="CC" class="form-control" />
+                <span asp-validation-for="CC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LoadCapacity" class="control-label"></label>
+                <input asp-for="LoadCapacity" class="form-control" />
+                <span asp-validation-for="LoadCapacity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Accessories" class="control-label"></label>
+                <input asp-for="Accessories" class="form-control" />
+                <span asp-validation-for="Accessories" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeliveryDays" class="control-label"></label>
+                <input asp-for="DeliveryDays" class="form-control" />
+                <span asp-validation-for="DeliveryDays" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OfferDays" class="control-label"></label>
+                <input asp-for="OfferDays" class="form-control" />
+                <span asp-validation-for="OfferDays" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
